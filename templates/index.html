@@ -1,0 +1,129 @@
+{% include "header.html" %}
+    <!-- Page Content -->
+
+    <!-- Banner Starts Here -->
+    <div class="banner header-text">
+      <div class="owl-banner owl-carousel">
+        <div class="banner-item-01">
+          <div class="text-content">
+            <h2>Shop Online today and get premium and swift delivery</h2>
+            <p class="main_talk">Do you want to buy premium goods? </p>
+            <p class="main_talk">We are available to take your orders now! We offer delivery services</p>
+            <a href="{{ url_for('delivery') }}" class="filled-button">Shop now and get instant delivery</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends Here -->
+    <div class="latest-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Latest Products</h2>
+              <a href="{{ url_for('product')}}">view all products <i class="fa fa-angle-right"></i></a>
+            </div>
+          
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="#"><img src="static/assets/images/hollandia.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="#"><h4>Hollandia Yoghurt</h4></a>
+                <h6>#1,000(1pc)</h6>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-4">
+            <div class="product-item">
+              <a href="#"><img src="static/assets/images/jameson.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="#"><h4>Jameson</h4></a>
+                <h6>#11,000 each</h6>
+                <p>Available as seen </p>
+              </div>
+            </div>
+          </div>
+            </div>
+            <div class="col-md-4">
+            <div class="product-item">
+              <a href="#"><img src="static/assets/images/rice.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="#"><h4>Rice</h4></a>
+                <h6>#1,200(per Congo)</h6>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="best-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>About GNF STORE</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <h4>Looking for the best and pocket friendly products?</h4>
+              <p>GNF STORE is one of the biggest and consistent store within TASUED campus and offers its customers the
+                widest range of products at the lowest prices. Whether it’s for your cooking,refreshments or work
+                needs, we have everything under one roof to take care of your friends and yourself. We pride ourselves in our
+                stores, fresh produce and meats,
+                and our ability to deliver the best possible shopping experience to our customers across the campus
+                .<a rel="nofollow" href="{{ url_for('delivery')}}">Place your order now</a></p>
+              <a href="{{ url_for('contact')}}" class="filled-button">For customer service and complains</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="static/assets/images/home.avif" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>Best Customer Relation</h4>
+                  <p>We grant customers Chance to buy now and pay Later after 6 months of Consistency</p>
+                  <p>You are going to enjoy Shopping with us</p>
+                </div>
+                <div class="col-md-4">
+                  <a href="{{ url_for('product') }}" class="filled-button">Shop now and get instant delivery</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+           <!-- Additional Scripts -->
+    <script src="static/assets/js/custom.js"></script>
+    <script src="static/assets/js/owl.js"></script>
+    <script src="static/assets/js/slick.js"></script>
+    <script src="static/assets/js/isotope.js"></script>
+    <script src="static/assets/js/accordions.js"></script>
+
+
+    <script language = "text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+                {% include 'footer.html' %}

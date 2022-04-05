@@ -1,0 +1,82 @@
+{% include 'header.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+    <link rel="stylesheet" href="static/assets/css/templatemo-sixteen.css">
+    <link rel="stylesheet" href="static/assets/css/owl.css">
+
+    <!-- Page Content -->
+    <div class="page-heading products-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>DO YOU WANT TO PICKUP AT STORE OR WANT DOORSTEP DELIVERY?</h4>
+              <h2>Premium Goods</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {{ ckeditor.load() }}
+        {{ ckeditor.config(name='item') }}
+        <h3>Important Notice</h3>
+        <ul>
+          <li>
+            * Before you make an order make sure you check order again
+          </li>
+           <li>
+             * If any goods in your order is unavailable you're going to get an instant refund on delivery
+          </li>
+           <li>
+             * If you want to get delivery a service charge would be added to your original bill range(#300 up to #500)
+          </li>
+           <li>
+            * Finally after making an order make an instant transfer to First City Monument Bank with the following details
+             <strong><i>3992152019</i></strong>   <strong>Odulaja Mary Omosola</strong>
+               For Safety and happy transaction <a href="{{ url_for('contact') }}">check more about us</a>
+          </li>
+        </ul>
+          <br>
+             {% with messages = get_flashed_messages() %}
+         {% if messages %}
+               {% for message in messages %}
+          <h3 style="color:green"><em>{{ message }}</em></h3>
+         {% endfor %}
+         {% endif %}
+      {% endwith %}
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+          <br>
+                      <a href="{{ url_for('home') }}" class="filled-button">Return to homepage after transactions</a>
+      </div>
+    </div>
+  </div>
+
+    <!--Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="static/assets/js/custom.js"></script>
+    <script src="static/assets/js/owl.js"></script>
+    <script src="static/assets/js/slick.js"></script>
+    <script src="static/assets/js/isotope.js"></script>
+    <script src="static/assets/js/accordions.js"></script>
+
+
+    <script language = "text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+            {% include 'footer.html' %}
